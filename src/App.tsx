@@ -7,6 +7,7 @@ import Categories from "./pages/categories";
 import Brands from "./pages/brands";
 import Products from "./pages/products";
 import Settings from "./pages/settings";
+import NewVariant from "./pages/variants/newVariant";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           </Route>
           <Route path="/variants" element={<Outlet />}>
             <Route index element={<Variants />} />
+            <Route path="new" element={<NewVariant />} />
           </Route>
           <Route path="/categories" element={<Outlet />}>
             <Route index element={<Categories />} />
