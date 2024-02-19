@@ -6,7 +6,7 @@ const variantsTableHeaders = [
   },
   {
     title: "Kategori Id",
-    dataIndex: "category_id",
+    dataIndex: "categoryId",
     key: "category_id",
   },
   {
@@ -16,12 +16,12 @@ const variantsTableHeaders = [
   },
   {
     title: "Oluşturulma Tarihi",
-    dataIndex: "created_at",
+    dataIndex: "createdAt",
     key: "created_at",
   },
   {
     title: "Güncellenme Tarihi",
-    dataIndex: "updated_at",
+    dataIndex: "updatedAt",
     key: "updated_at",
   },
 ];
