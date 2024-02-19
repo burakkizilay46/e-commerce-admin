@@ -1,13 +1,27 @@
-import { Button, Table } from "antd";
+import { Button, Modal, Table } from "antd";
 
 import { variantsTableHeaders } from "../../utils/data/variants";
 import { useNavigate } from "react-router-dom";
-import PageTitle from "../../components/PageTitle";
+import PageTitle from "../../components/PageTitle/PageTitle";
 import { variantsData } from "../../utils/mock/variants";
-
 import { EditOutlined, DeleteOutlined } from "@ant-design/icons";
 
+import { useState } from "react";
+
 const Variants = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const showModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleOk = () => {
+    setIsModalOpen(false);
+  };
+
+  const handleCancel = () => {
+    setIsModalOpen(false);
+  };
   const navigate = useNavigate();
   return (
     <div>
@@ -26,11 +40,11 @@ const Variants = () => {
               <div className="flex gap-4 h-12 text-xl ">
                 <EditOutlined
                   className="hover:text-blue-500"
-                  onClick={() => alert("Düzenle Tıkladın")}
+                  onClick={showModal}
                 />
                 <DeleteOutlined
                   className="hover:text-blue-500"
-                  onClick={() => alert("Sil Tıkladın")}
+                  onClick={showModal}
                 />
               </div>
             ),
@@ -39,6 +53,16 @@ const Variants = () => {
         dataSource={variantsData}
         className="pt-12"
       />
+      <Modal
+        title="Basic Modal"
+        open={isModalOpen}
+        onOk={handleOk}
+        onCancel={handleCancel}
+      >
+        <p>Some contents...</p>
+        <p>Some contents...</p>
+        <p>Some contents...</p>
+      </Modal>
     </div>
   );
 };
