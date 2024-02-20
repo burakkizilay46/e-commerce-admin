@@ -2,12 +2,15 @@ import { Outlet, Route, Routes } from "react-router-dom";
 import DefaultLayout from "./layout/DefaultLayout";
 import ProtectedLayout from "./layout/ProtectedLayout";
 import Home from "./pages/home";
+
 import Variants from "./pages/variants";
+import NewVariant from "./pages/variants/newVariant";
+import EditVariant from "./pages/variants/editVariant";
+
 import Categories from "./pages/categories";
 import Brands from "./pages/brands";
 import Products from "./pages/products";
 import Settings from "./pages/settings";
-import NewVariant from "./pages/variants/newVariant";
 
 function App() {
   return (
@@ -27,6 +30,7 @@ function App() {
           <Route path="/variants" element={<Outlet />}>
             <Route index element={<Variants />} />
             <Route path="new" element={<NewVariant />} />
+            <Route path=":id/edit" element={<EditVariant />} />
           </Route>
           <Route path="/categories" element={<Outlet />}>
             <Route index element={<Categories />} />

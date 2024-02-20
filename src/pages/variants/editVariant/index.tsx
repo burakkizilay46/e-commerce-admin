@@ -1,10 +1,10 @@
-import PageTitle from "../../../components/PageTitle/PageTitle";
 import VariantForm from "../variantForm";
+import PageTitle from "../../../components/PageTitle/PageTitle";
 
-const NewVariant = () => {
+const EditVariant = () => {
   return (
     <div>
-      <PageTitle title="Varyant Oluştur" />
+      <PageTitle title="Varyant Düzenle" />
       <div className="rounded-md border-2 mt-8 p-12">
         <VariantForm />
       </div>
@@ -12,4 +12,4 @@ const NewVariant = () => {
   );
 };
 
-export default NewVariant;
+export default EditVariant;

@@ -9,6 +9,7 @@ import { EditOutlined, DeleteOutlined } from "@ant-design/icons";
 import { useState } from "react";
 
 const Variants = () => {
+  const navigate = useNavigate();
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const showModal = () => {
@@ -22,7 +23,7 @@ const Variants = () => {
   const handleCancel = () => {
     setIsModalOpen(false);
   };
-  const navigate = useNavigate();
+
   return (
     <div>
       <PageTitle title="Varyant Tablosu" />
@@ -40,7 +41,7 @@ const Variants = () => {
               <div className="flex gap-4 h-12 text-xl ">
                 <EditOutlined
                   className="hover:text-blue-500"
-                  onClick={showModal}
+                  onClick={() => navigate(`${3}/edit`)}
                 />
                 <DeleteOutlined
                   className="hover:text-blue-500"

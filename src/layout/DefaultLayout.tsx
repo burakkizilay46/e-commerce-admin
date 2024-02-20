@@ -1,7 +1,5 @@
 import { Layout } from "antd";
-
 import { Content } from "antd/es/layout/layout";
-
 import { Navbar } from "./Navbar";
 import Sidebar from "./Sidebar";
 
