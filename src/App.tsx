@@ -11,6 +11,8 @@ import Categories from "./pages/categories";
 import Brands from "./pages/brands";
 import Products from "./pages/products";
 import Settings from "./pages/settings";
+import NewCategory from "./pages/categories/newCategory";
+import EditCategory from "./pages/categories/editCategory";
 
 function App() {
   return (
@@ -34,6 +36,8 @@ function App() {
           </Route>
           <Route path="/categories" element={<Outlet />}>
             <Route index element={<Categories />} />
+            <Route path="new" element={<NewCategory />} />
+            <Route path=":id/edit" element={<EditCategory />} />
           </Route>
           <Route path="/brands" element={<Outlet />}>
             <Route index element={<Brands />} />
