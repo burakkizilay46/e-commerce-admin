@@ -1,31 +1,53 @@
 const sidebarDatas = [
   {
-    key: "1",
+    key: "home",
     path: "/home",
     title: "Ana Sayfa",
+    children: [
+      {
+        key: "sub home 1",
+        path: "/variants",
+        title: "sub Home",
+      },
+    ],
   },
   {
-    key: "2",
-    path: "/variants",
-    title: "Varyantlar",
-  },
-  {
-    key: "3",
-    path: "/categories",
-    title: "Kategoriler",
-  },
-  {
-    key: "4",
-    path: "/brands",
-    title: "Markalar",
-  },
-  {
-    key: "5",
+    key: "products",
     path: "/products",
     title: "Ürünler",
   },
   {
-    key: "6",
+    key: "orders",
+    path: "/orders",
+    title: "Siparişler",
+  },
+  {
+    key: "campaigns",
+    path: "/campaigns",
+    title: "Kampanyalar",
+  },
+  {
+    key: "members",
+    path: "/members",
+    title: "Üyeler",
+  },
+  {
+    key: "variants",
+    path: "/variants",
+    title: "Varyantlar",
+  },
+  {
+    key: "categories",
+    path: "/categories",
+    title: "Kategoriler",
+  },
+  {
+    key: "brands",
+    path: "/brands",
+    title: "Markalar",
+  },
+  {
+    key: "settings",
     path: "/settings",
     title: "Ayarlar",
   },

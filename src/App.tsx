@@ -13,6 +13,10 @@ import Products from "./pages/products";
 import Settings from "./pages/settings";
 import NewCategory from "./pages/categories/newCategory";
 import EditCategory from "./pages/categories/editCategory";
+import Orders from "./pages/orders";
+import Campaigns from "./pages/campaigns";
+import Members from "./pages/members";
+import NewProduct from "./pages/products/newProduct";
 
 function App() {
   return (
@@ -44,9 +48,19 @@ function App() {
           </Route>
           <Route path="/products" element={<Outlet />}>
             <Route index element={<Products />} />
+            <Route path="new" element={<NewProduct />} />ƒ
           </Route>
           <Route path="/settings" element={<Outlet />}>
             <Route index element={<Settings />} />
+          </Route>
+          <Route path="/orders" element={<Outlet />}>
+            <Route index element={<Orders />} />
+          </Route>
+          <Route path="/campaigns" element={<Outlet />}>
+            <Route index element={<Campaigns />} />
+          </Route>
+          <Route path="/members" element={<Outlet />}>
+            <Route index element={<Members />} />
           </Route>
         </Route>
       </Routes>
