@@ -1,15 +1,18 @@
 import { Layout } from "antd";
-import { Content } from "antd/es/layout/layout";
-import { Navbar } from "./Navbar";
 import Sidebar from "./Sidebar";
+import { Navbar } from "./Navbar";
+
+const { Content } = Layout;
 
 const DefaultLayout = ({ children }: any) => {
   return (
-    <Layout>
+    <Layout style={{ minHeight: "100vh" }}>
       <Navbar />
       <Layout>
         <Sidebar />
-        <Content className="p-12">{children}</Content>
+        <Content style={{ padding: "24px", backgroundColor: "white" }}>
+          {children}
+        </Content>
       </Layout>
     </Layout>
   );

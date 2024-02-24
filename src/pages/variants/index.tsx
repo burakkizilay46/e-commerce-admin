@@ -54,16 +54,16 @@ const Variants = () => {
         dataSource={variantsData}
         className="pt-12"
       />
-      <Modal
-        title="Basic Modal"
-        open={isModalOpen}
-        onOk={handleOk}
-        onCancel={handleCancel}
-      >
-        <p>Some contents...</p>
-        <p>Some contents...</p>
-        <p>Some contents...</p>
-      </Modal>
+        <Modal
+            title="Silmek istediğinizden emin misiniz?"
+            open={isModalOpen}
+            onOk={handleOk}
+            onCancel={handleCancel}
+        >
+            <p>Silmek istediğinizden emin misiniz?...</p>
+            <p>Some contents...</p>
+            <p>Some contents...</p>
+        </Modal>
     </div>
   );
 };

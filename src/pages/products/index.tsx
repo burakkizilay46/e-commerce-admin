@@ -63,7 +63,7 @@ const Products = () => {
         onOk={handleOk}
         onCancel={handleCancel}
       >
-        <p>Some contents...</p>
+        <p>Silmek istediğinizden emin misiniz?...</p>
         <p>Some contents...</p>
         <p>Some contents...</p>
       </Modal>
