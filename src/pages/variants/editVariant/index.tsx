@@ -1,5 +1,6 @@
 import VariantForm from "../variantForm";
 import PageTitle from "../../../components/PageTitle/PageTitle";
+import { Button } from "antd";
 
 const EditVariant = () => {
   return (

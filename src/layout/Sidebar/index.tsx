@@ -40,7 +40,10 @@ const Sidebar = () => {
         defaultSelectedKeys={["1"]}
         defaultOpenKeys={["sub1"]}
         items={items}
-        style={{ height: "100%", borderRight: 0 }}
+        style={{
+          height: "100%",
+          borderRight: 0,
+        }}
       />
     </Sider>
   );

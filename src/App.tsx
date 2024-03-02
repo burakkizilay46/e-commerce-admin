@@ -17,6 +17,7 @@ import Orders from "./pages/orders";
 import Campaigns from "./pages/campaigns";
 import Members from "./pages/members";
 import NewProduct from "./pages/products/newProduct";
+import Comments from "./pages/comments";
 
 function App() {
   return (
@@ -61,6 +62,9 @@ function App() {
           </Route>
           <Route path="/members" element={<Outlet />}>
             <Route index element={<Members />} />
+          </Route>
+          <Route path="/comments" element={<Outlet />}>
+            <Route index element={<Comments />} />
           </Route>
         </Route>
       </Routes>
