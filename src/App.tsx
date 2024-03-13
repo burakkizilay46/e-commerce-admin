@@ -17,6 +17,9 @@ import Orders from "./pages/orders";
 import Campaigns from "./pages/campaigns";
 import Members from "./pages/members";
 import NewProduct from "./pages/products/newProduct";
+import Comments from "./pages/comments";
+import NewMember from "./pages/members/newMember";
+import EditMember from "./pages/members/editMember";
 
 function App() {
   return (
@@ -61,6 +64,11 @@ function App() {
           </Route>
           <Route path="/members" element={<Outlet />}>
             <Route index element={<Members />} />
+            <Route path="new" element={<NewMember />} />
+            <Route path=":id/edit" element={<EditMember />} />
+          </Route>
+          <Route path="/comments" element={<Outlet />}>
+            <Route index element={<Comments />} />
           </Route>
         </Route>
       </Routes>
