@@ -27,3 +27,5 @@ const variantsTableHeaders = [
 ];
 
 export { variantsTableHeaders };
+
+/* blablabla */
