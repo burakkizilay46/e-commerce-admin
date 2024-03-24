@@ -13,6 +13,7 @@ const login = async (form: LoginType) => {
       message.error(err?.response?.data?.message || err?.message);
       return err?.response?.data?.message || err?.message;
     });
+  return;
 };
 
 export { login };
