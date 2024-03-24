@@ -20,11 +20,16 @@ import NewProduct from "./pages/products/newProduct";
 import Comments from "./pages/comments";
 import NewMember from "./pages/members/newMember";
 import EditMember from "./pages/members/editMember";
+import LoginView from "./pages/auth/login";
 
 function App() {
   return (
     <>
       <Routes>
+        <Route path="/auth" element={<Outlet />}>
+          <Route path="login" element={<LoginView />} />
+        </Route>
+
         <Route
           path="/"
           element={
