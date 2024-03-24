@@ -5,8 +5,8 @@ import { login } from "../../../network";
 import { useNavigate } from "react-router-dom";
 
 const LoginView = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState("furkanguzelgorur@gmail.com");
+  const [password, setPassword] = useState("123456789");
   const [isLoading, setIsLoading] = useState(false);
 
   const navigate = useNavigate();
@@ -16,7 +16,11 @@ const LoginView = () => {
     setIsLoading(true);
     try {
       const response = await login({ email: email, password: password });
-      if (response.acessToken !== null) {
+      if (
+        response.access_token !== null ||
+        response.access_token !== undefined
+      ) {
+        localStorage.setItem("acessToken", response.access_token);
         navigate("/home");
       } else {
         message.error(
@@ -54,6 +58,7 @@ const LoginView = () => {
           <Input
             placeholder="E Mail"
             onChange={(e) => setEmail(e.target.value)}
+            defaultValue={email}
           />
         </div>
         <div className="w-full flex flex-col gap-1">
@@ -61,6 +66,7 @@ const LoginView = () => {
           <Input.Password
             placeholder="Password"
             onChange={(e) => setPassword(e.target.value)}
+            defaultValue={password}
           />
         </div>
         <Button className="w-[156px] bg-white" onClick={handleSubmit}>
