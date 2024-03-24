@@ -1,11 +1,11 @@
 import { message } from "antd";
 import useAxisosInterceptor, { axiosInstance } from "../api/axiosInterceptor";
 
-const login = async () => {
+const login = async (form: LoginType) => {
   return await axiosInstance
     .post("/api/admin/auth/login", {
-      email: "furkanguzelgorur@gmail.com",
-      password: "123456789",
+      email: form.email,
+      password: form.password,
     })
     .then((res) => res.data)
     .catch((err) => {
