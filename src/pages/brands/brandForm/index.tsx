@@ -1,6 +1,6 @@
 import { Button, Form, Input } from "antd";
 
-const MemberForm = () => {
+const BrandForm = () => {
   return (
     <div className="bg-white rounded-lg shadow-md p-6">
       <Form
@@ -9,59 +9,69 @@ const MemberForm = () => {
         wrapperCol={{ span: 24 }}
       >
         <Form.Item
-          label="Adı"
+          label="Marka Adı"
           name="name"
-          rules={[{ required: true, message: "Lütfen İsminizi giriniz!" }]}
+          rules={[{ required: true, message: "Lütfen marka adını giriniz!" }]}
         >
           <Input className="rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-orange-500" />
         </Form.Item>
         <Form.Item
-          label="Soyadı"
-          name="surname"
-          rules={[{ required: true, message: "Lütfen soyisminizi giriniz!" }]}
+          label="Marka Grubu"
+          name="group"
+          rules={[{ required: true, message: "Lütfen marka grubunu giriniz!" }]}
         >
           <Input className="rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-orange-500" />
         </Form.Item>
         <Form.Item
-          label="Şirket İsmi"
-          name="company"
-          rules={[{ required: true, message: "Lütfen şirket ismini giriniz!" }]}
+          label="Meta Başlık"
+          name="metaTitle"
+          rules={[{ required: true, message: "Lütfen meta başlığı giriniz!" }]}
         >
           <Input className="rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-orange-500" />
         </Form.Item>
         <Form.Item
-          label="E-Posta"
-          name="email"
+          label="Meta Tanımlamalar"
+          name="metaDescription"
           rules={[
-            { required: true, message: "Lütfen e-postanızı giriniz!" },
+            { required: true, message: "Lütfen meta tanımlamaları giriniz!" },
+          ]}
+        >
+          <Input.TextArea className="rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-orange-500" />
+        </Form.Item>
+        <Form.Item
+          label="Ürün Sayısı"
+          name="productCount"
+          rules={[
+            { required: true, message: "Lütfen ürün sayısını giriniz!" },
+            { type: "number", message: "Lütfen geçerli bir sayı giriniz!" },
+          ]}
+        >
+          <Input
+            type="number"
+            className="rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-orange-500"
+          />
+        </Form.Item>
+        <Form.Item
+          label="Marka Logosu URL"
+          name="logo"
+          rules={[
             {
-              type: "email",
-              message: "Geçerli bir e-posta adresi giriniz!",
+              required: true,
+              message: "Lütfen marka logosu URL'sini giriniz!",
             },
           ]}
         >
           <Input className="rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-orange-500" />
         </Form.Item>
-
         <Form.Item
-          label="Telefon"
-          name="phone"
+          label="Marka Web Sitesi URL"
+          name="website"
           rules={[
-            { required: true, message: "Lütfen telefon numaranızı giriniz!" },
             {
-              pattern: /^[0-9]{10}$/,
-              message:
-                "Geçerli bir telefon numarası giriniz! (örn: 5551234567)",
+              required: true,
+              message: "Lütfen marka web sitesi URL'sini giriniz!",
             },
           ]}
-        >
-          <Input className="rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-orange-500" />
-        </Form.Item>
-
-        <Form.Item
-          label="Şehir"
-          name="city"
-          rules={[{ required: true, message: "Lütfen şehrinizi giriniz!" }]}
         >
           <Input className="rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-orange-500" />
         </Form.Item>
@@ -79,4 +89,4 @@ const MemberForm = () => {
   );
 };
 
-export default MemberForm;
+export default BrandForm;

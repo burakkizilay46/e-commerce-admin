@@ -1,8 +1,8 @@
-import { Button, Form, Input, Select } from "antd";
+import { Button, Form, Input, DatePicker } from "antd";
 
 const CategoryForm = () => {
   return (
-    <div>
+    <div className="bg-white rounded-lg shadow-md p-6">
       <Form
         className="grid grid-cols-2 gap-4"
         labelCol={{ span: 24 }}
@@ -13,14 +13,14 @@ const CategoryForm = () => {
           name="name"
           rules={[{ required: true, message: "Lüfen Kategori Adı Giriniz!" }]}
         >
-          <Input />
+          <Input className="border rounded-md px-4 py-2" />
         </Form.Item>
         <Form.Item
           label="Kategori Resmi"
           name="image"
           rules={[{ required: true, message: "Lüfen Kategori Resmi Giriniz!" }]}
         >
-          <Input type="file" />
+          <Input type="file" className="border rounded-md px-4 py-2" />
         </Form.Item>
         <Form.Item
           label="Seo Linki"
@@ -29,7 +29,7 @@ const CategoryForm = () => {
             { required: true, message: "Lüfen Kategori Seo Link Giriniz!" },
           ]}
         >
-          <Input />
+          <Input className="border rounded-md px-4 py-2" />
         </Form.Item>
         <Form.Item
           label="Seo Başlığı"
@@ -38,7 +38,7 @@ const CategoryForm = () => {
             { required: true, message: "Lüfen Kategori Seo Başlığı Giriniz!" },
           ]}
         >
-          <Input />
+          <Input className="border rounded-md px-4 py-2" />
         </Form.Item>
         <Form.Item
           label="Seo Açıklaması"
@@ -50,58 +50,38 @@ const CategoryForm = () => {
             },
           ]}
         >
-          <Input.TextArea />
+          <Input.TextArea className="border rounded-md px-4 py-2" />
         </Form.Item>
         <Form.Item
-          label="Seo Açıklaması"
-          name="seo_keywords"
+          label="Oluşturulma Tarihi"
+          name="createdAt"
           rules={[
             {
               required: true,
-              message: "Lüfen Kategori Seo Anahar Kelimeleri Seçiniz!",
+              message: "Lütfen oluşturulma tarihini giriniz!",
             },
           ]}
         >
-          <Select />
+          <DatePicker className="border rounded-md px-4 py-2" />
         </Form.Item>
         <Form.Item
-          label="Top Menu"
-          name="top_menu"
+          label="Güncelleme Tarihi"
+          name="updatedAt"
           rules={[
             {
               required: true,
-              message: "Lüfen Kategori Top Menu Seçiniz!",
+              message: "Lütfen güncelleme tarihini giriniz!",
             },
           ]}
         >
-          <Input />
+          <DatePicker className="border rounded-md px-4 py-2" />
         </Form.Item>
-        <Form.Item
-          label="Showcase"
-          name="showcase"
-          rules={[
-            {
-              required: true,
-              message: "Lüfen Kategori Top Menu Seçiniz!",
-            },
-          ]}
-        >
-          <Input />
-        </Form.Item>
-        <Form.Item
-          label="Row"
-          name="row"
-          rules={[
-            {
-              required: true,
-              message: "Lüfen Kategori Top Menu Seçiniz!",
-            },
-          ]}
-        >
-          <Input />
-        </Form.Item>
-        <Form.Item className="w-full flex justify-end items-end">
-          <Button type="default" htmlType="submit" className="w-[150px] h-9">
+        <Form.Item className="w-full flex justify-center">
+          <Button
+            type="default"
+            htmlType="submit"
+            className="w-[200px] h-10 rounded-full bg-orange-500 text-white hover:bg-orange-600 focus:bg-orange-700"
+          >
             Ekle
           </Button>
         </Form.Item>

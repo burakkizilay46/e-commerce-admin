@@ -8,7 +8,6 @@ import NewVariant from "./pages/variants/newVariant";
 import EditVariant from "./pages/variants/editVariant";
 
 import Categories from "./pages/categories";
-import Brands from "./pages/brands";
 import Products from "./pages/products";
 import Settings from "./pages/settings";
 import NewCategory from "./pages/categories/newCategory";
@@ -20,6 +19,15 @@ import NewProduct from "./pages/products/newProduct";
 import Comments from "./pages/comments";
 import NewMember from "./pages/members/newMember";
 import EditMember from "./pages/members/editMember";
+import EditBrand from "./pages/brands/editBrand";
+import NewBrand from "./pages/brands/newBrand";
+import Brands from "./pages/brands";
+import NewOrder from "./pages/orders/newOrder";
+import EditOrder from "./pages/orders/editOrder";
+import NewCampaign from "./pages/campaigns/newCampaign";
+import EditCampaign from "./pages/campaigns/editCampaign";
+import NewComment from "./pages/comments/newComment";
+import EditComment from "./pages/comments/editComment";
 
 function App() {
   return (
@@ -48,6 +56,8 @@ function App() {
           </Route>
           <Route path="/brands" element={<Outlet />}>
             <Route index element={<Brands />} />
+            <Route path="new" element={<NewBrand />} />
+            <Route path=":id/edit" element={<EditBrand />} />
           </Route>
           <Route path="/products" element={<Outlet />}>
             <Route index element={<Products />} />
@@ -58,9 +68,13 @@ function App() {
           </Route>
           <Route path="/orders" element={<Outlet />}>
             <Route index element={<Orders />} />
+            <Route path="new" element={<NewOrder />} />
+            <Route path=":id/edit" element={<EditOrder />} />
           </Route>
           <Route path="/campaigns" element={<Outlet />}>
             <Route index element={<Campaigns />} />
+            <Route path="new" element={<NewCampaign />} />
+            <Route path=":id/edit" element={<EditCampaign />} />
           </Route>
           <Route path="/members" element={<Outlet />}>
             <Route index element={<Members />} />
@@ -69,6 +83,8 @@ function App() {
           </Route>
           <Route path="/comments" element={<Outlet />}>
             <Route index element={<Comments />} />
+            <Route path="new" element={<NewComment />} />
+            <Route path=":id/edit" element={<EditComment />} />
           </Route>
         </Route>
       </Routes>
@@ -77,4 +93,3 @@ function App() {
 }
 
 export default App;
-//seda

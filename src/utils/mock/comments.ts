@@ -1,0 +1,48 @@
+const CommentData: CommentType[] = [
+  {
+    id: 1,
+    picture: "path_to_picture_1",
+    username: "John",
+    title: "Harika Ürün!",
+    message: "Ürün gerçekten harika, çok memnun kaldım.",
+    like: 5,
+    commentType: "Ayakkabı",
+    productId: 123,
+    published: true,
+  },
+  {
+    id: 2,
+    picture: "path_to_picture_2",
+    username: "Emma",
+    title: "Beğenmedim",
+    message: "Üründen pek memnun kalmadım, kalitesi düşük.",
+    like: 2,
+    commentType: "Kıyafet",
+    productId: 456,
+    published: false,
+  },
+  {
+    id: 3,
+    picture: "path_to_picture_3",
+    username: "Michael",
+    title: "Orta Halli",
+    message: "Ürünün fiyatına göre orta halli bir performansı var.",
+    like: 3,
+    commentType: "Cüzdan",
+    productId: 789,
+    published: true,
+  },
+  {
+    id: 4,
+    picture: "path_to_picture_4",
+    username: "Sophia",
+    title: "Beklentilerin Altında",
+    message: "Ürünün vaat ettiği performansı sunmuyor.",
+    like: 1,
+    commentType: "Çanta",
+    productId: 123,
+    published: true,
+  },
+];
+
+export { CommentData };

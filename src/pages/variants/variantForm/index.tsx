@@ -30,7 +30,11 @@ const VariantForm = () => {
           <Select />
         </Form.Item>
         <Form.Item className="w-full flex justify-end items-end">
-          <Button type="default" htmlType="submit" className="w-[150px] h-9">
+          <Button
+            type="default"
+            htmlType="submit"
+            className="w-[200px] h-10 rounded-full bg-orange-500 text-white hover:bg-orange-600 focus:bg-orange-700"
+          >
             Ekle
           </Button>
         </Form.Item>
