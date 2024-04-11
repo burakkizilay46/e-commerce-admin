@@ -28,11 +28,16 @@ import NewCampaign from "./pages/campaigns/newCampaign";
 import EditCampaign from "./pages/campaigns/editCampaign";
 import NewComment from "./pages/comments/newComment";
 import EditComment from "./pages/comments/editComment";
+import LoginView from "./pages/auth/login";
 
 function App() {
   return (
     <>
       <Routes>
+        <Route path="/auth" element={<Outlet />}>
+          <Route path="login" element={<LoginView />} />
+        </Route>
+
         <Route
           path="/"
           element={
