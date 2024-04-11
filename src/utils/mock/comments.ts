@@ -7,7 +7,7 @@ const CommentData: CommentType[] = [
     message: "Ürün gerçekten harika, çok memnun kaldım.",
     like: 5,
     commentType: "Ayakkabı",
-    productId: 123,
+    productId: 154,
     published: true,
   },
   {
