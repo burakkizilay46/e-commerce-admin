@@ -73,7 +73,7 @@ const CampaignForm = () => {
               },
             ]}
           >
-            <Switch className="bg-orange-500" />
+            <Switch className="rounded-lg px-4 py-2 focus:outline-none bg-orange-500" />
           </Form.Item>
           <Form.Item
             label="Mobil Aktiflik"
@@ -86,7 +86,7 @@ const CampaignForm = () => {
               },
             ]}
           >
-            <Switch className="bg-orange-500" />
+            <Switch className="rounded-lg px-4 py-2 focus:outline-none bg-orange-500" />
           </Form.Item>
         </div>
         <Button className="w-[200px] h-10 rounded-full bg-orange-500 text-white hover:bg-orange-600 focus:bg-orange-700">

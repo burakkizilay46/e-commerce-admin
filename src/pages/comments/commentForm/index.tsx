@@ -57,20 +57,6 @@ const CommentForm = () => {
         </div>
         <div className="rounded-md border-2 p-4 flex flex-col gap-4">
           <p className="font-medium text-lg">Yorum Durumu</p>
-          <p className="font-medium text-lg">Test Durumu</p>
-          <Form.Item
-            label="Yorum Onaylı"
-            name="approved"
-            valuePropName="checked"
-            rules={[
-              {
-                required: true,
-                message: "Lütfen yorumun onay durumunu belirtiniz!",
-              },
-            ]}
-          >
-            <Switch className=" bg-orange-500" />
-          </Form.Item>
           <Form.Item
             label="Yayın Durumu"
             name="published"
@@ -82,7 +68,7 @@ const CommentForm = () => {
               },
             ]}
           >
-            <Switch className=" bg-orange-500" />
+            <Switch className="rounded-lg px-4 py-2 focus:outline-none bg-orange-500" />
           </Form.Item>
         </div>
         <Button className="w-[200px] h-10 rounded-full bg-orange-500 text-white hover:bg-orange-600 focus:bg-orange-700">

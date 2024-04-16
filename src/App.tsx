@@ -6,7 +6,7 @@ import Home from "./pages/home";
 import Variants from "./pages/variants";
 import NewVariant from "./pages/variants/newVariant";
 import EditVariant from "./pages/variants/editVariant";
-
+import Supplier from "./pages/supplier";
 import Categories from "./pages/categories";
 import Products from "./pages/products";
 import Settings from "./pages/settings";
@@ -29,6 +29,8 @@ import EditCampaign from "./pages/campaigns/editCampaign";
 import NewComment from "./pages/comments/newComment";
 import EditComment from "./pages/comments/editComment";
 import LoginView from "./pages/auth/login";
+import NewSupplier from "./pages/supplier/newSupplier";
+import EditSupplier from "./pages/supplier/editSupplier";
 
 function App() {
   return (
@@ -90,6 +92,11 @@ function App() {
             <Route index element={<Comments />} />
             <Route path="new" element={<NewComment />} />
             <Route path=":id/edit" element={<EditComment />} />
+          </Route>
+          <Route path="/supplier" element={<Outlet />}>
+            <Route index element={<Supplier />} />
+            <Route path="new" element={<NewSupplier />} />
+            <Route path=":id/edit" element={<EditSupplier />} />
           </Route>
         </Route>
       </Routes>

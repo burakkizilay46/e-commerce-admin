@@ -32,13 +32,13 @@ const ProductForm = () => {
             <Form.Item>
               <div className="flex flex-row items-center justify-between">
                 Aktif
-                <Switch className="bg-orange-500" />
+                <Switch className="rounded-lg px-4 py-2 focus:outline-none bg-orange-500" />
               </div>
             </Form.Item>
             <Form.Item>
               <div className="flex flex-row items-center justify-between">
                 Fırsat Ürünü
-                <Switch className="bg-orange-500" />
+                <Switch className="rounded-lg px-4 py-2 focus:outline-none bg-orange-500" />
               </div>
             </Form.Item>
           </div>
