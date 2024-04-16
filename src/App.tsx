@@ -31,6 +31,9 @@ import EditComment from "./pages/comments/editComment";
 import LoginView from "./pages/auth/login";
 import NewSupplier from "./pages/supplier/newSupplier";
 import EditSupplier from "./pages/supplier/editSupplier";
+import Subproduct from "./pages/subproducts";
+import NewSubproduct from "./pages/subproducts/newSubproduct";
+import EditSubproduct from "./pages/subproducts/editSubproduct";
 
 function App() {
   return (
@@ -97,6 +100,11 @@ function App() {
             <Route index element={<Supplier />} />
             <Route path="new" element={<NewSupplier />} />
             <Route path=":id/edit" element={<EditSupplier />} />
+          </Route>
+          <Route path="/subproducts" element={<Outlet />}>
+            <Route index element={<Subproduct />} />
+            <Route path="new" element={<NewSubproduct />} />
+            <Route path=":id/edit" element={<EditSubproduct />} />
           </Route>
         </Route>
       </Routes>
