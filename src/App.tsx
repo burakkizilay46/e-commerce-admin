@@ -34,6 +34,10 @@ import EditSupplier from "./pages/supplier/editSupplier";
 import Subproduct from "./pages/subproducts";
 import NewSubproduct from "./pages/subproducts/newSubproduct";
 import EditSubproduct from "./pages/subproducts/editSubproduct";
+import Subproductgroups from "./pages/subproductgroups";
+import NewSubproductgroup from "./pages/subproductgroups/newSubproductgroups";
+import EditSubproductgroup from "./pages/subproductgroups/editSubproductgroups";
+import Tags from "./pages/tags";
 
 function App() {
   return (
@@ -105,6 +109,14 @@ function App() {
             <Route index element={<Subproduct />} />
             <Route path="new" element={<NewSubproduct />} />
             <Route path=":id/edit" element={<EditSubproduct />} />
+          </Route>
+          <Route path="/subproductgroups" element={<Outlet />}>
+            <Route index element={<Subproductgroups />} />
+            <Route path="new" element={<NewSubproductgroup />} />
+            <Route path=":id/edit" element={<EditSubproductgroup />} />
+          </Route>
+          <Route path="/tags" element={<Outlet />}>
+            <Route index element={<Tags />} />
           </Route>
         </Route>
       </Routes>
